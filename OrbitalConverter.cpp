@@ -33,14 +33,14 @@ using namespace std;
 #define __EPSILON__          DBL_EPSILON///DBL_EPSILO if __FLOAT_TYPE__ determined as double
 #define __GRAVITY_CONSTANT__ 6.67384e-11
 #define __PI__               3.14159265358979323846
-#define __PI_2__			 1.57079632679489661923
+#define __PI_2__	     1.57079632679489661923
 #define __OUTPUT_PRECISION__ 20u
 
 bool convertOrbitalData(__FLOAT_TYPE__ orbitalSemimajorAxis,   __FLOAT_TYPE__ eccentricity, 
-	                    __FLOAT_TYPE__ inclination,            __FLOAT_TYPE__ argumentOfPeriapsis, 
-						__FLOAT_TYPE__ ascendingNodeLongitude, __FLOAT_TYPE__ eraMeanAnomaly,     
-						     unsigned currentYYYYMMDD,               unsigned eraYYYYMMDD,
-					    __FLOAT_TYPE__ gravityParameter,       __FLOAT_TYPE__ *outputStorage);
+	                 __FLOAT_TYPE__ inclination,            __FLOAT_TYPE__ argumentOfPeriapsis, 
+			__FLOAT_TYPE__ ascendingNodeLongitude, __FLOAT_TYPE__ eraMeanAnomaly,     
+			unsigned currentYYYYMMDD,               unsigned eraYYYYMMDD,
+			__FLOAT_TYPE__ gravityParameter,       __FLOAT_TYPE__ *outputStorage);
 
 inline void greeting(void);
 string help(string inputParameter);
@@ -292,28 +292,6 @@ __FLOAT_TYPE__ diffYYYYMMDD(unsigned date2, unsigned date1)
 #undef __FIRST_JANUARY_SHIFT__
 
 	return differenceSec;
-
-	///---------------Bad---------------
-	/*stringstream tempSStream1;
-	stringstream tempSStream2;
-	string tempStr1 = "date DD.MM.YYYY";
-	string tempStr2 = "date DD.MM.YYYY";
-	unsigned DD1 = date1 % 100u;
-	unsigned MM1 = (date1 % 10000u) / 100u;
-	unsigned YYYY1 = date1 / 10000u;
-	unsigned DD2 = date2 % 100u;
-	unsigned MM2 = (date2 % 10000u) / 100u;
-	unsigned YYYY2 = date2 / 10000u;
-	tempSStream1 << "date " << DD1 << "." << MM1 << "." << YYYY1;
-	tempSStream2 << "date " << DD2 << "." << MM2 << "." << YYYY2
-	tempStr1 = tempSStream1.str();
-	tempStr2 = tempSStream2.str();
-	time_t date1sec;
-	time_t date2sec;
-	time_t dateCurrentTemp;
-	system(tempStr1.c_str());*/
-	///(...)
-	///---------------------------------
 }
 
 __FLOAT_TYPE__ getMeanAnomaly(__FLOAT_TYPE__ gravityParameter, __FLOAT_TYPE__ orbitalSemimajorAxis, unsigned currentYYYYMMDD, unsigned eraYYYYMMDD, __FLOAT_TYPE__ eraMeanAnomaly)
@@ -469,6 +447,7 @@ inline void greeting(void)
 	setlocale(LC_ALL, "RUS");
 	cout << "--------------------------Orbital Converter версия 1.0--------------------------" << endl;
 	cout << ">Добро пожаловать! Вас приветствует конвертер орбитальных данных." << endl;
+	cout << ">Исходный текст программы доступен на https://github.com/Nzuri-hpp/Orbital-Converter" << endl;
 	cout << ">Для конвертации из файла введите batch путь_к_файлу. " << endl;
 	cout << ">Для получения справки по формату ввода введите /help. " << endl;
 }
