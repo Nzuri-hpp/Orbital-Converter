@@ -1,4 +1,5 @@
 // OrbitalConverter.cpp : Defines the entry point for the console application.
+// Tested with Microsoft Visual C++ Compiler November 2013
 
 // Copyright 2015 Злобин Данил
 
