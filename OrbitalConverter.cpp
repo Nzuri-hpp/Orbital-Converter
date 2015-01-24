@@ -46,7 +46,7 @@ inline void greeting(void);
 string help(string inputParameter);
 inline string stringDetect(const string inputString, const string inputParameter);
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
 #define __INVITATION__ endl << ">"
 
@@ -447,7 +447,8 @@ inline void greeting(void)
 	setlocale(LC_ALL, "RUS");
 	cout << "--------------------------Orbital Converter версия 1.0--------------------------" << endl;
 	cout << ">Добро пожаловать! Вас приветствует конвертер орбитальных данных." << endl;
-	cout << ">Исходный текст программы доступен на https://github.com/Nzuri-hpp/Orbital-Converter" << endl;
+	cout << ">Исходный текст программы доступен на:" << endl;
+	cout << "\t\t\t\thttps://github.com/Nzuri-hpp/Orbital-Converter" << endl << endl;
 	cout << ">Для конвертации из файла введите batch путь_к_файлу. " << endl;
 	cout << ">Для получения справки по формату ввода введите /help. " << endl;
 }
